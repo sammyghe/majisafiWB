@@ -59,6 +59,21 @@
 .ci-icon{width:44px;height:44px;}
 .ci-title{font-size:13px;}
 .ci-sub{font-size:10px;}
+  /* SOCIAL POSTS — realistic look */
+.sp-topbar{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:linear-gradient(to bottom,rgba(0,0,0,.45),transparent);z-index:3;}
+.sp-account{display:flex;align-items:center;gap:7px;}
+.sp-account span{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:800;color:white;letter-spacing:.5px;}
+.sp-account.dark span{color:var(--ink);}
+.sp-logo{width:24px;height:24px;border-radius:50%;background:var(--blue);border:1.5px solid white;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:8px;font-weight:900;color:white;}
+.sp-logo.blue{background:var(--blue);border-color:var(--ink);}
+.sp-plat{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;}
+.ig-plat{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);}
+.tt-plat{background:#010101;}
+.sp-watermark{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Montserrat',sans-serif;font-size:28px;font-weight:900;font-style:italic;color:rgba(255,255,255,.06);letter-spacing:2px;pointer-events:none;white-space:nowrap;z-index:1;}
+.sp-watermark.dark-wm{color:rgba(0,0,0,.07);}
+.sp-tag{display:inline-block;font-family:'Montserrat',sans-serif;font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;background:rgba(0,119,182,.75);color:white;padding:3px 8px;border-radius:4px;margin-bottom:6px;backdrop-filter:blur(4px);}
+.sp-stats{display:flex;gap:10px;margin-top:6px;}
+.sp-stats span{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,.9);}
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     :root{
@@ -832,6 +847,7 @@
 </div>
 
 <!-- SOCIAL WALL -->
+<!-- SOCIAL WALL -->
 <div id="social" class="social">
   <div class="social-inner">
     <div class="soc-hdr">
@@ -841,15 +857,96 @@
         <a href="https://tiktok.com/@majisafi" target="_blank" class="fbtn tt"><svg viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.17 8.17 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>@majisafi</a>
       </div>
     </div>
+
     <div class="sgrid">
-      <div class="spost sg1" id="sp1"><div class="spost-ov"><div class="spost-big">Pure water.<br/>Real community.</div><div class="spost-cap">Hydration Club launch · Kampala, March 2026</div></div><div class="spost-meta"><div class="spost-plat">INSTAGRAM</div><div class="spost-stat">1.2K likes</div></div></div>
-      <div class="spost sg2" id="sp2"><div class="spost-ov"><div class="spost-big" style="font-size:18px;color:var(--ink)">Delivery day</div><div class="spost-cap" style="color:rgba(2,17,26,.7)">Tuk-tuk across Kampala</div></div><div class="spost-meta"><div class="spost-plat">INSTAGRAM</div><div class="spost-stat">847 likes</div></div></div>
-      <div class="spost sg3" id="sp3"><div class="spost-ov"><div class="spost-big" style="font-size:16px">Inside the plant</div><div class="spost-cap">Buziga facility</div></div><div class="spost-meta"><div class="spost-plat">TIKTOK</div><div class="spost-stat">28K views</div></div></div>
-      <div class="spost sg4" id="sp4"><div class="spost-ov"><div class="spost-big" style="font-size:18px;color:var(--ink)">WHO certified.</div><div class="spost-cap" style="color:rgba(2,17,26,.7)">Every batch</div></div><div class="spost-meta"><div class="spost-plat">INSTAGRAM</div><div class="spost-stat">634 likes</div></div></div>
-      <div class="spost sg5" id="sp5"><div class="spost-ov"><div class="spost-big">Refill. Save.<br/>Repeat.</div><div class="spost-cap">Own your reusable jar</div></div><div class="spost-meta"><div class="spost-plat">TIKTOK</div><div class="spost-stat">41K views</div></div></div>
-      <div class="spost sg6" id="sp6"><div class="spost-ov"><div class="spost-big" style="font-size:16px">Health talk<br/>this April</div><div class="spost-cap">Hydration Club</div></div><div class="spost-meta"><div class="spost-plat">INSTAGRAM</div><div class="spost-stat">921 likes</div></div></div>
+
+      <!-- Post 1 — big feature -->
+      <div class="spost sg1" id="sp1" style="background:linear-gradient(160deg,#001f3f,#0077B6,#7EC8E3);">
+        <div class="sp-topbar">
+          <div class="sp-account"><div class="sp-logo">MS</div><span>majisafi</span></div>
+          <div class="sp-plat ig-plat"><svg width="11" height="11" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+        </div>
+        <div class="sp-watermark">MAJI SAFI</div>
+        <div class="spost-ov">
+          <div class="sp-tag">HYDRATION CLUB LAUNCH</div>
+          <div class="spost-big">Pure water.<br/>Real community.</div>
+          <div class="spost-cap">Kampala, March 2026 · @majisafi</div>
+          <div class="sp-stats"><span>❤️ 1.2K</span><span>💬 84</span></div>
+        </div>
+      </div>
+
+      <!-- Post 2 -->
+      <div class="spost sg2" id="sp2" style="background:linear-gradient(135deg,#CAF0F8,#7EC8E3);">
+        <div class="sp-topbar">
+          <div class="sp-account dark"><div class="sp-logo blue">MS</div><span>majisafi</span></div>
+          <div class="sp-plat ig-plat"><svg width="11" height="11" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+        </div>
+        <div class="sp-watermark dark-wm">MAJI SAFI</div>
+        <div class="spost-ov">
+          <div class="sp-tag" style="background:rgba(0,0,0,.2);color:var(--ink);">DELIVERY DAY</div>
+          <div class="spost-big" style="font-size:17px;color:var(--ink)">Tuk-tuk across<br/>Kampala 🛺</div>
+          <div class="sp-stats"><span style="color:rgba(2,17,26,.7)">❤️ 847</span></div>
+        </div>
+      </div>
+
+      <!-- Post 3 — TikTok -->
+      <div class="spost sg3" id="sp3" style="background:linear-gradient(160deg,#001f3f,#003d7a,#0077B6);">
+        <div class="sp-topbar">
+          <div class="sp-account"><div class="sp-logo">MS</div><span>majisafi</span></div>
+          <div class="sp-plat tt-plat"><svg width="11" height="11" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.17 8.17 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg></div>
+        </div>
+        <div class="sp-watermark">MAJI SAFI</div>
+        <div class="spost-ov">
+          <div class="sp-tag">INSIDE THE PLANT</div>
+          <div class="spost-big" style="font-size:15px;">Buziga facility<br/>behind the scenes</div>
+          <div class="sp-stats"><span>▶ 28K views</span></div>
+        </div>
+      </div>
+
+      <!-- Post 4 -->
+      <div class="spost sg4" id="sp4" style="background:linear-gradient(135deg,#7EC8E3,#CAF0F8);">
+        <div class="sp-topbar">
+          <div class="sp-account dark"><div class="sp-logo blue">MS</div><span>majisafi</span></div>
+          <div class="sp-plat ig-plat"><svg width="11" height="11" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+        </div>
+        <div class="sp-watermark dark-wm">MAJI SAFI</div>
+        <div class="spost-ov">
+          <div class="sp-tag" style="background:rgba(0,0,0,.2);color:var(--ink);">WHO CERTIFIED</div>
+          <div class="spost-big" style="font-size:15px;color:var(--ink)">Every batch.<br/>Every time. ✅</div>
+          <div class="sp-stats"><span style="color:rgba(2,17,26,.7)">❤️ 634</span></div>
+        </div>
+      </div>
+
+      <!-- Post 5 — TikTok wide -->
+      <div class="spost sg5" id="sp5" style="background:linear-gradient(160deg,#001a35,#003060,#0066aa);">
+        <div class="sp-topbar">
+          <div class="sp-account"><div class="sp-logo">MS</div><span>majisafi</span></div>
+          <div class="sp-plat tt-plat"><svg width="11" height="11" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.17 8.17 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg></div>
+        </div>
+        <div class="sp-watermark">MAJI SAFI</div>
+        <div class="spost-ov">
+          <div class="sp-tag">REFILL & SAVE</div>
+          <div class="spost-big">Own your jar.<br/>Refill forever. 💧</div>
+          <div class="sp-stats"><span>▶ 41K views</span><span>❤️ 2.1K</span></div>
+        </div>
+      </div>
+
+      <!-- Post 6 -->
+      <div class="spost sg6" id="sp6" style="background:linear-gradient(135deg,#0077B6,#7EC8E3);">
+        <div class="sp-topbar">
+          <div class="sp-account"><div class="sp-logo">MS</div><span>majisafi</span></div>
+          <div class="sp-plat ig-plat"><svg width="11" height="11" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+        </div>
+        <div class="sp-watermark">MAJI SAFI</div>
+        <div class="spost-ov">
+          <div class="sp-tag">HYDRATION CLUB</div>
+          <div class="spost-big" style="font-size:15px;">Health talk<br/>this April 🗓</div>
+          <div class="sp-stats"><span>❤️ 921</span></div>
+        </div>
+      </div>
+
     </div>
-    <p class="soc-live">Connect live feed via <a href="https://behold.so" target="_blank">Behold.so</a> or <a href="https://elfsight.com" target="_blank">Elfsight</a> — one embed replaces this grid.</p>
+    <p class="soc-live">Connect live feed via <a href="https://behold.so" target="_blank">Behold.so</a> — replaces this grid with real posts automatically.</p>
   </div>
 </div>
 
